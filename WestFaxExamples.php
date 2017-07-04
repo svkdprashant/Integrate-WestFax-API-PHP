@@ -31,10 +31,10 @@ $objWestFax = new WestFax('8c89x2c7-2a7a-47d3-9336-e4072d484ed6', '8UaMPvbR', 'j
 */
 $strCoverFrom = 'Test Cover For Fax';
 $strDocument = 'LearnwithGoogle.pdf';
-$strPhoneNumber = array('5105868243');
+$arrPhoneNumber = array('5105868243');
 $strJobName = 'First Test Job';
 
-$arrSendFaxResponse = $objWestFax->sendFax($strCoverFrom, $strDocument, $strPhoneNumber, $strJobName);
+$arrSendFaxResponse = $objWestFax->sendFax($strCoverFrom, $strDocument, $arrPhoneNumber, $strJobName);
 if($arrSendFaxResponse['ApiResultOfString']['Success'] == 'true')
 {
 	$strJobId = $arrSendFaxResponse['ApiResultOfString']['Result'];
